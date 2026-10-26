@@ -1,6 +1,6 @@
 # Crimson Desert Survival Tweaks (DMM) — for game version 2.03.02
 
-A set of small JSON mods for Crimson Desert, loaded through DMM (Definitive Mod Manager), that make Normal difficulty a bit harsher without switching to Hard:
+A set of mods to make the normal mode slightly harder without switching to hard
 
 - **Food cooldown** — a longer cooldown on food and on medicine-type consumables (herbs, insects, holy water, elixirs).
 - **Full eat animation** — on Normal, eating plays out like it does on Hard (with any food cooldown, or on its own).
@@ -8,7 +8,7 @@ A set of small JSON mods for Crimson Desert, loaded through DMM (Definitive Mod 
 - **Hard enemies, Normal bosses** — regular enemies fight at Hard strength, bosses stay at Normal.
 - **Hard damage taken** — you take Hard-mode damage (+30%) on Normal.
 
-All files are built for **Crimson Desert 2.03.02** and use DMM's **field-name (V3) format** (`.field.json`): each change names the item and the field it sets (for example `max_stack_count` on `RevivalItem`), and DMM locates the data itself. That means they survive game updates that move or resize records. Requires **DMM 3.x**.
+All files are built for **Crimson Desert 2.03.02** and use DMM's **field-name (V3) format** (`.field.json`): each change names the item and the field it sets (for example `max_stack_count` on `RevivalItem`), and DMM locates the data itself. That means they survive game updates that move or resize records. Requires **DMM 3.x** or you can use the provided mod loader cdmods.py
 
 ## Quick start: cdmods (no mod manager needed)
 
@@ -30,7 +30,7 @@ How it works:
 - If the game files aren't original — a game update, another mod manager with mods mounted, manual edits — it refuses and tells you to run Steam "Verify integrity of game files" (or `restore`, if it holds a backup for your version).
 - Close the game before applying or restoring. After a game update, just run it again.
 
-If you use DMM instead, don't use both at once: unmount in DMM before using cdmods, and restore with cdmods before mounting in DMM.
+If you use DMM instead, make sure to load only one mode in a group. For instance a food 30s cooldown mod can't be loaded with a 15s cooldown mod.
 
 ## Files
 
@@ -65,9 +65,9 @@ Vanilla is 10 of each with no total cap. These lower `max_stack_count` and turn 
 | File | What it does |
 |------|--------------|
 | `CD_Hard_Enemies_Normal_Bosses.field.json` | On Normal, 5,730 characters on the regular difficulty buff use the Hard level: more HP, knockdown resistance, faster attacks and movement. Bosses and mini-bosses stay at Normal, as does the player. |
-| `CD_Hard_Damage_Taken.field.json` | On Normal, you take Hard-mode damage: +30% damage taken. Applies to the playable characters (Kliff, Damian, Oongka, Yann, Nairah, Witch); enemies and bosses are unchanged. |
+| `CD_Hard_Damage_Taken.field.json` | On Normal, you take Hard-mode damage: +30% damage taken. Applies to the playable characters; enemies and bosses are unchanged. |
 
-## Install with DMM (alternative)
+## Install with DMM
 
 1. Copy the files you want into your DMM `mods/` folder — at most one food cooldown file and one Palmar Pill file; the enemy file can go alongside both.
 2. Enable them in DMM and mount.
