@@ -73,6 +73,10 @@ Vanilla is 10 of each with no total cap. These lower `max_stack_count` and turn 
 2. Enable them in DMM and mount.
 3. Check the mount log (`backups/mount_log.txt` in DMM's data folder, e.g. `~/.local/share/DMM/` on Linux) — each table should report `0 unresolved, 0 mismatch`, and the summary should show `Errors/warnings (0)`. If anything is unresolved or skipped, unmount and do not play.
 
+## ReShade
+
+My ReShade + RenoDX graphics setup (a tweaked Verdant Ember preset) is in [`reshade/`](reshade/).
+
 ## Credits
 
 - Food cooldown is based on **CD Food Cooldown** by **Rogue69** — <https://www.nexusmods.com/crimsondesert/mods/3090>
